@@ -19,6 +19,7 @@ namespace FlipACoin
             }
             Console.WriteLine("#Heads: " + headsCounter);
             Console.WriteLine("#Tails: " + tailsCounter);
+            Console.WriteLine("It took: " + FlipForHeads() + " time(s)");
             Console.ReadKey();
         }
 
@@ -37,5 +38,14 @@ namespace FlipACoin
                 return "Tails";
             }
         }
+    public static int FlipForHeads()
+    {
+        int counter = 1;
+        while(rng.Next(2) != 0)
+        {
+            counter++;
+        }
+        return counter;
+    }
     }
 }
