@@ -13,6 +13,7 @@ namespace FlipACoin
         static int tailsCounter = 0;
         static void Main(string[] args)
         {
+            //call flip functions with paramater of 1000
             for (int i = 0; i < 1000; i++)
             {
                 Console.WriteLine("Flipped: " + FlipACoin());
@@ -20,7 +21,15 @@ namespace FlipACoin
             Console.WriteLine("#Heads: " + headsCounter);
             Console.WriteLine("#Tails: " + tailsCounter);
             Console.WriteLine("It took: " + FlipForHeads() + " time(s)");
-            Console.ReadKey();
+            //call flip function with paramter of 10000
+            for (int i = 0; i < 10000; i++)
+            {
+                Console.WriteLine("Flipped: " + FlipACoin());
+            }
+            Console.WriteLine("#Heads: " + headsCounter);
+            Console.WriteLine("#Tails: " + tailsCounter);
+            Console.WriteLine("It took: " + FlipForHeads() + " time(s)");
+            
         }
 
         public static string FlipACoin()
